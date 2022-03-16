@@ -35,4 +35,11 @@ explore: gpa_creative_stats {
     type:full_outer
     relationship: many_to_many
   }
+
+  join: advertiser_weekly_spend {
+    sql_on:${advertiser_weekly_spend.advertiser_name} = ${gpa_advertiser_stats.advertiser_name}
+      and ${advertiser_weekly_spend.advertiser_name} = ${gpa_advertiser_stats.advertiser_name};;
+    type:full_outer
+    relationship: many_to_many
+  }
 }
