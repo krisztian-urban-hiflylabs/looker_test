@@ -2,7 +2,7 @@
 connection: "hifly-bigquery"
 
 # include all the views
-#include: "/views/**/*.view"
+include: "/views/**/*.view"
 
 # Datagroups define a caching policy for an Explore. To learn more,
 # use the Quick Help panel on the right to see documentation.
@@ -24,3 +24,5 @@ persist_with: kurban_test_default_datagroup
 # To create more sophisticated Explores that involve multiple views, you can use the join parameter.
 # Typically, join parameters require that you define the join type, join relationship, and a sql_on clause.
 # Each joined view also needs to define a primary key.
+
+explore: google_political_ads {}
