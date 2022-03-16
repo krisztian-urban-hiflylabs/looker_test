@@ -1,4 +1,4 @@
-view: google_political_ads {
+ view: gpa_creative_stats {
   sql_table_name:  `google_political_ads.creative_stats` ;;
 
   dimension: regions {
@@ -34,6 +34,21 @@ view: google_political_ads {
     type:  string
     description: "Ad Campaigns List"
     sql: ${TABLE}.ad_campaigns_list ;;
+
+  }
+
+  dimension: age_targeting {
+    type:  string
+    description: "Age Targeting"
+    sql: ${TABLE}.age_targeting ;;
+
+  }
+
+
+  dimension: gender_targeting {
+    type:  string
+    description: "Gender Targeting"
+    sql: ${TABLE}.gender_targeting ;;
 
   }
 

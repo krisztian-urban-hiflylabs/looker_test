@@ -25,4 +25,14 @@ persist_with: kurban_test_default_datagroup
 # Typically, join parameters require that you define the join type, join relationship, and a sql_on clause.
 # Each joined view also needs to define a primary key.
 
-explore: google_political_ads {}
+explore: gpa_creative_stats {
+
+
+  join: gpa_advertiser_stats {
+    view_label: "  Stats"
+    sql_on:  ${gpa_creative_stats.advertiser_name} = ${gpa_advertiser_stats.advertiser_name}
+      and ${gpa_creative_stats.advertiser_name} = ${gpa_advertiser_stats.advertiser_name};;
+    type:full_outer
+    relationship: many_to_many
+  }
+}
